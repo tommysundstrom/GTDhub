@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: Controller</title>
+
+	<link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+
+	<script src="./js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="./mail_to_gtd_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="mail_to_gtd.rb">mail_to_gtd.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link">Object</p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#M000004">::new</a></li>
+					
+					<li><a href="#M000007">#add_days_to_date</a></li>
+					
+					<li><a href="#M000006">#message_url</a></li>
+					
+					<li><a href="#M000005">#process_message_rule</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="./images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="./Controller.html">Controller</a></li>
+				
+					<li><a href="./MailToGtdTest.html">MailToGtdTest</a></li>
+				
+					<li><a href="./Mail_app.html">Mail_app</a></li>
+				
+					<li><a href="./PerfomMailActionWithMessages_delegate.html">PerfomMailActionWithMessages_delegate</a></li>
+				
+					<li><a href="./TheHitList_app.html">TheHitList_app</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">Controller</h1>
+
+		<div id="description">
+			
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+		<div id="attribute-method-details" class="method-section section">
+			<h3 class="section-header">Attributes</h3>
+
+			
+			<div id="task-template-attribute-method" class="method-detail">
+				<a name="task_template"></a>
+				
+				<a name="task_template="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">task_template</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p class="missing-docs">(Not documented)</p>
+				
+				</div>
+			</div>
+			
+		</div>
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="M000004"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p class="missing-docs">(Not documented)</p>
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+<span class="ruby-comment cmt"># File mail_to_gtd.rb, line 40</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>
+    <span class="ruby-ivar">@mail</span> = <span class="ruby-constant">Mail_app</span>.<span class="ruby-identifier">new</span>
+    <span class="ruby-comment cmt">#@gtd = OmniFocus_app.new</span>
+    <span class="ruby-ivar">@gtd</span> = <span class="ruby-constant">TheHitList_app</span>.<span class="ruby-identifier">new</span>
+    <span class="ruby-comment cmt">#@options = command_line_options(ARGV) # Dictionary with the options</span>
+
+??
+  <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="add-days-to-date-method" class="method-detail ">
+				<a name="M000007"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">add_days_to_date</span><span
+						class="method-args">(date, number_of_days)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p class="missing-docs">(Not documented)</p>
+					
+
+					
+					<div class="method-source-code"
+						id="add-days-to-date-source">
+<pre>
+<span class="ruby-comment cmt"># File mail_to_gtd.rb, line 108</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">add_days_to_date</span>(<span class="ruby-identifier">date</span>, <span class="ruby-identifier">number_of_days</span>)
+    <span class="ruby-keyword kw">return</span>
+    <span class="ruby-identifier">date</span> = <span class="ruby-identifier">message</span>.<span class="ruby-identifier">dateSent</span>
+  <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="message-url-method" class="method-detail ">
+				<a name="M000006"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">message_url</span><span
+						class="method-args">(message_id)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p class="missing-docs">(Not documented)</p>
+					
+
+					
+					<div class="method-source-code"
+						id="message-url-source">
+<pre>
+<span class="ruby-comment cmt"># File mail_to_gtd.rb, line 103</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">message_url</span>(<span class="ruby-identifier">message_id</span>)
+    <span class="ruby-comment cmt"># set _messageURL to &quot;message://%3c&quot; &amp; msg's message id &amp; &quot;%3e&quot;</span>
+    <span class="ruby-keyword kw">return</span> <span class="ruby-node">&quot;message://%3c#{message_id}%3e&quot;</span>
+  <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="process-message-rule-method" class="method-detail ">
+				<a name="M000005"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">process_message_rule</span><span
+						class="method-args">(message_id, mailbox_path, rule)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p class="missing-docs">(Not documented)</p>
+					
+
+					
+					<div class="method-source-code"
+						id="process-message-rule-source">
+<pre>
+<span class="ruby-comment cmt"># File mail_to_gtd.rb, line 58</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">process_message_rule</span>(<span class="ruby-identifier">message_id</span>, <span class="ruby-identifier">mailbox_path</span>, <span class="ruby-identifier">rule</span>)
+    <span class="ruby-constant">NSLog</span> <span class="ruby-value str">&quot;Mailbox name: &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">mailbox_path</span>
+    <span class="ruby-comment cmt"># (Note: Only one message at the time will be feeded this way.)</span>
+    <span class="ruby-identifier">task_info</span> = <span class="ruby-constant">OpenStruct</span>.<span class="ruby-identifier">new</span>
+
+    <span class="ruby-identifier">message</span> = <span class="ruby-ivar">@mail</span>.<span class="ruby-identifier">message_from_messageid</span>(<span class="ruby-identifier">message_id</span>, <span class="ruby-identifier">mailbox_path</span>)
+
+    <span class="ruby-constant">NSLog</span> <span class="ruby-node">&quot;Processing mail rule '#{rule}' on '#{message.subject}'.&quot;</span>
+    <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">rule</span>
+      <span class="ruby-keyword kw">when</span> <span class="ruby-value str">'Test'</span>
+        <span class="ruby-identifier">task_info</span>.<span class="ruby-identifier">title</span> = <span class="ruby-identifier">message</span>.<span class="ruby-identifier">subject</span>
+        <span class="ruby-identifier">task_info</span>.<span class="ruby-identifier">message_url</span> = <span class="ruby-identifier">message_url</span>(<span class="ruby-identifier">message_id</span>)
+
+      <span class="ruby-keyword kw">when</span> <span class="ruby-value str">'Act-On: q | Agera'</span>, <span class="ruby-value str">'gtd@heltenkelt.se'</span>, <span class="ruby-value str">'---'</span>
+        <span class="ruby-identifier">task_info</span>.<span class="ruby-identifier">title</span> = <span class="ruby-identifier">message</span>.<span class="ruby-identifier">subject</span>
+        <span class="ruby-identifier">task_info</span>.<span class="ruby-identifier">message_url</span> = <span class="ruby-identifier">message_url</span>(<span class="ruby-identifier">message_id</span>)
+        <span class="ruby-identifier">task_info</span>.<span class="ruby-identifier">notes</span> = <span class="ruby-identifier">message</span>.<span class="ruby-identifier">content</span>.<span class="ruby-identifier">get</span>
+
+      <span class="ruby-keyword kw">when</span> <span class="ruby-value str">'Twitter-foljare'</span>
+        <span class="ruby-identifier">task_info</span>.<span class="ruby-identifier">title</span> = <span class="ruby-identifier">message</span>.<span class="ruby-identifier">subject</span>
+        <span class="ruby-identifier">task_info</span>.<span class="ruby-identifier">message_url</span> = <span class="ruby-identifier">message_url</span>(<span class="ruby-identifier">message_id</span>)
+        <span class="ruby-identifier">task_info</span>.<span class="ruby-identifier">due_date</span> = <span class="ruby-constant">DateTime</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">message</span>.<span class="ruby-identifier">dateSent</span>.<span class="ruby-identifier">to_s</span>) <span class="ruby-operator">+</span> <span class="ruby-value">14</span> <span class="ruby-comment cmt"># Two weeks from when the mail was sent.</span>
+        <span class="ruby-identifier">task_info</span>.<span class="ruby-identifier">notes</span> = <span class="ruby-identifier">message</span>.<span class="ruby-identifier">content</span>.<span class="ruby-identifier">get</span>   <span class="ruby-comment cmt"># TODO Extract the right folow-url directly</span>
+        <span class="ruby-comment cmt"># TODO Move to a Twitter-list</span>
+
+      <span class="ruby-keyword kw">when</span> <span class="ruby-value str">'Stadsbiblioteket'</span>
+        <span class="ruby-identifier">task_info</span>.<span class="ruby-identifier">title</span> = <span class="ruby-node">&quot;Biblioteket. L√§mna: [#{message.subject}]&quot;</span>
+        <span class="ruby-identifier">task_info</span>.<span class="ruby-identifier">message_url</span> = <span class="ruby-identifier">message_url</span>(<span class="ruby-identifier">message_id</span>)
+        <span class="ruby-identifier">task_info</span>.<span class="ruby-identifier">due_date</span> = <span class="ruby-constant">DateTime</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">message</span>.<span class="ruby-identifier">dateSent</span>.<span class="ruby-identifier">to_s</span>) <span class="ruby-operator">+</span> <span class="ruby-value">2</span> <span class="ruby-comment cmt"># Two days from when the mail was sent.</span>
+        <span class="ruby-identifier">task_info</span>.<span class="ruby-identifier">notes</span> = <span class="ruby-identifier">message</span>.<span class="ruby-identifier">content</span>.<span class="ruby-identifier">get</span>
+        <span class="ruby-comment cmt">#@mail.archive_mailmessage(message, 'Bacn/Test2')</span>
+
+      <span class="ruby-keyword kw">when</span> <span class="ruby-value str">'Act-On: s | Svara'</span>, <span class="ruby-value str">'Act-On: t | Test'</span>
+        <span class="ruby-identifier">task_info</span>.<span class="ruby-identifier">title</span> = <span class="ruby-identifier">message</span>.<span class="ruby-identifier">subject</span>
+        <span class="ruby-identifier">task_info</span>.<span class="ruby-identifier">contexts_tags</span> = <span class="ruby-value str">'@mail'</span>
+        <span class="ruby-identifier">task_info</span>.<span class="ruby-identifier">message_url</span> = <span class="ruby-identifier">message_url</span>(<span class="ruby-identifier">message_id</span>)
+        <span class="ruby-identifier">task_info</span>.<span class="ruby-identifier">due_date</span> = <span class="ruby-constant">DateTime</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">message</span>.<span class="ruby-identifier">dateSent</span>.<span class="ruby-identifier">to_s</span>) <span class="ruby-operator">+</span> <span class="ruby-value">2</span> <span class="ruby-comment cmt"># Two days from when the mail was sent.</span>
+        <span class="ruby-identifier">task_info</span>.<span class="ruby-identifier">notes</span> = <span class="ruby-identifier">message</span>.<span class="ruby-identifier">content</span>.<span class="ruby-identifier">get</span>
+      
+      <span class="ruby-keyword kw">else</span>
+        <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;No code for processing rule '#{rule}' &quot;</span>
+    <span class="ruby-keyword kw">end</span>
+    <span class="ruby-ivar">@gtd</span>.<span class="ruby-identifier">create_task</span>(<span class="ruby-identifier">task_info</span>)
+  <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

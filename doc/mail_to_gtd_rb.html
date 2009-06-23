@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>File: mail_to_gtd.rb [RDoc Documentation]</title>
+
+	<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet" />
+
+	<script src="./js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+</head>
+
+<body class="file file-popup">
+	<div id="metadata">
+		<dl>
+			<dt class="modified-date">Last Modified</dt>
+			<dd class="modified-date">Tue Jun 23 10:56:59 +0200 2009</dd>
+
+			
+			<dt class="requires">Requires</dt>
+			<dd class="requires">
+				<ul>
+				
+					<li>rubygems</li>
+				
+					<li>osx/cocoa</li>
+				
+					<li>ostruct</li>
+				
+					<li>open3</li>
+				
+					<li>trollop</li>
+				
+				</ul>
+			</dd>
+			
+
+			
+		</dl>
+	</div>
+
+	<div id="documentation">
+		
+		<div class="description">
+			<h2>Description</h2>
+			<p>
+# Command line app, primarily used by Mail.app rules to send actions to
+OmniFocus # # To call from a rule, make an applescript like this: using
+terms from application &#8220;Mail&#8220;
+</p>
+<pre>
+        on perform mail action with messages theMessages for rule theRule
+                repeat with aMessage in theMessages
+                        do shell script &quot;ruby \&quot;/Users/Tommy/Programmering/Ruby/RubymineProjects/mail_to_gtd/mail_to_gtd.rb\&quot; \&quot;--id &quot; &amp; id of aMessage &amp; &quot; --rule '&quot; &amp; name of theRule &amp; &quot;'\&quot;&quot;
+                        -- The shell script will be something like this:
+                        --
+                        -- ruby &quot;/Users/Tommy/Programmering/Ruby/RubymineProjects/mail_to_gtd/mail_to_gtd.rb&quot; &quot;--id 48594 --rule 'Act-On: g | GTD'&quot;
+                        --
+                        -- You may want to change this, depending on how you've set up your system.
+                        -- Not that no changes needs to be done to this script, once you have the right path etc. in it.
+            -- Just call it from the rule.
+            --
+            -- Please note that if the message is moved before Ruby has been able to find it, there is a risk that it
+            -- is found. So move it before the script is called, or let Ruby (not the mail filter) handle archiving,
+            -- deleting, etc.
+</pre>
+<p>
+It&#8217;s up to the Ruby script to decide what should happen, depending on
+the name of the rule.
+</p>
+<pre>
+                        -- If the message are to be moved/archived/deleted after being processed, this could be handlad by the Ruby script. Personaly I prefer to handle those things with the rule in Mail (i.e. first call this apple script, and then do the moving/deliting).
+                end repeat
+        end perform mail action with messages
+</pre>
+<p>
+end using terms from
+</p>
+
+		</div>
+		
+	</div>
+</body>
+</html>
+

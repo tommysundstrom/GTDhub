@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: TheHitList_app</title>
+
+	<link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+
+	<script src="./js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="./mail_to_gtd_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="mail_to_gtd.rb">mail_to_gtd.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link">Object</p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#M000010">::new</a></li>
+					
+					<li><a href="#M000014">#container_from_path</a></li>
+					
+					<li><a href="#M000011">#create_task</a></li>
+					
+					<li><a href="#M000013">#id_for_task</a></li>
+					
+					<li><a href="#M000016">#method_missing</a></li>
+					
+					<li><a href="#M000012">#set_due_date_for_task</a></li>
+					
+					<li><a href="#M000015">#strip_tags_and_contexts</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="./images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="./Controller.html">Controller</a></li>
+				
+					<li><a href="./MailToGtdTest.html">MailToGtdTest</a></li>
+				
+					<li><a href="./Mail_app.html">Mail_app</a></li>
+				
+					<li><a href="./PerfomMailActionWithMessages_delegate.html">PerfomMailActionWithMessages_delegate</a></li>
+				
+					<li><a href="./TheHitList_app.html">TheHitList_app</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">TheHitList_app</h1>
+
+		<div id="description">
+			<p>
+Wrapper for &#8216;The Hit List&#8217; application.
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="M000010"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p class="missing-docs">(Not documented)</p>
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+<span class="ruby-comment cmt"># File mail_to_gtd.rb, line 137</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>
+    <span class="ruby-comment cmt"># Some code to remove the strange errors produced when using SBApplication.applicationWithBundleIdentifier</span>
+    <span class="ruby-comment cmt"># from http://www.dribin.org/dave/blog/archives/2008/05/27/sb_warnings/</span>
+    <span class="ruby-identifier">old_stderr</span> = <span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">clone</span>        <span class="ruby-comment cmt"># save current STDERR IO instance</span>
+    <span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">reopen</span>(<span class="ruby-value str">'/dev/null'</span>, <span class="ruby-value str">'w'</span>)  <span class="ruby-comment cmt"># send STDERR to /dev/null</span>
+    <span class="ruby-ivar">@app</span> = <span class="ruby-constant">SBApplication</span>.<span class="ruby-identifier">applicationWithBundleIdentifier</span>(<span class="ruby-value str">'com.potionfactory.TheHitList'</span>)
+    <span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">reopen</span>(<span class="ruby-identifier">old_stderr</span>)        <span class="ruby-comment cmt"># revert to default behavior</span>
+    <span class="ruby-identifier">old_stderr</span>.<span class="ruby-identifier">close</span>  
+  <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="create-task-method" class="method-detail ">
+				<a name="M000011"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">create_task</span><span
+						class="method-args">(task_info)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p class="missing-docs">(Not documented)</p>
+					
+
+					
+					<div class="method-source-code"
+						id="create-task-source">
+<pre>
+<span class="ruby-comment cmt"># File mail_to_gtd.rb, line 147</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">create_task</span>(<span class="ruby-identifier">task_info</span>)
+    <span class="ruby-identifier">task_properties</span> = {}
+
+    <span class="ruby-comment cmt"># Prepare the parts of task info that are to be in the properties of the task.</span>
+    <span class="ruby-identifier">title</span> = <span class="ruby-identifier">task_info</span>.<span class="ruby-identifier">title</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">task_info</span>.<span class="ruby-identifier">title</span>
+    <span class="ruby-identifier">title</span> = <span class="ruby-identifier">title</span> <span class="ruby-operator">+</span> <span class="ruby-value str">' '</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">task_info</span>.<span class="ruby-identifier">contexts_tags</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">task_info</span>.<span class="ruby-identifier">contexts_tags</span>
+    <span class="ruby-identifier">task_properties</span>[<span class="ruby-value str">'title'</span>] = <span class="ruby-identifier">title</span>
+    <span class="ruby-identifier">task_properties</span>[<span class="ruby-value str">'notes'</span>] = <span class="ruby-value str">''</span>
+    <span class="ruby-identifier">task_properties</span>[<span class="ruby-value str">'notes'</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">task_info</span>.<span class="ruby-identifier">message_url</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">task_info</span>.<span class="ruby-identifier">message_url</span>
+    <span class="ruby-identifier">task_properties</span>[<span class="ruby-value str">'notes'</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">&quot;\n\n&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">task_info</span>.<span class="ruby-identifier">message_url</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">task_info</span>.<span class="ruby-identifier">notes</span>
+    <span class="ruby-identifier">task_properties</span>[<span class="ruby-value str">'notes'</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">task_info</span>.<span class="ruby-identifier">notes</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">task_info</span>.<span class="ruby-identifier">notes</span>
+
+    <span class="ruby-comment cmt"># Create the task. (Note: Until placed in a list, it is of little use.)</span>
+    <span class="ruby-identifier">task</span> = <span class="ruby-ivar">@app</span>.<span class="ruby-identifier">classesForScriptingNames</span>[<span class="ruby-value str">'task'</span>].<span class="ruby-identifier">alloc</span>.<span class="ruby-identifier">initWithProperties</span>(<span class="ruby-identifier">task_properties</span>)
+
+    
+    <span class="ruby-comment cmt"># Create task in a list</span>
+    <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">task_info</span>.<span class="ruby-identifier">list</span>
+      <span class="ruby-identifier">container_from_path</span>(<span class="ruby-identifier">task_info</span>.<span class="ruby-identifier">list</span>).<span class="ruby-identifier">get</span>.<span class="ruby-identifier">tasks</span>.<span class="ruby-identifier">insertObject_atIndex</span>(<span class="ruby-identifier">task</span>,<span class="ruby-value">0</span>) <span class="ruby-comment cmt"># (Adds at top of list. To instead add at bottom, use addObject(task) )</span>
+      <span class="ruby-comment cmt"># This assumes that container_from_path(task_info.list) always will return a list or a task</span>
+    <span class="ruby-keyword kw">else</span>
+      <span class="ruby-comment cmt"># No list specified, use inbox</span>
+      <span class="ruby-ivar">@app</span>.<span class="ruby-identifier">inbox</span>.<span class="ruby-identifier">tasks</span>.<span class="ruby-identifier">insertObject_atIndex</span>(<span class="ruby-identifier">task</span>,<span class="ruby-value">0</span>)  <span class="ruby-comment cmt"># (Adds at top of list. To instead add at bottom, use addObject(task) )</span>
+      <span class="ruby-constant">NSLog</span> <span class="ruby-node">&quot;Created task '#{task.title}' in inbox.&quot;</span>
+    <span class="ruby-keyword kw">end</span>
+
+    <span class="ruby-comment cmt"># Set due date  </span>
+    <span class="ruby-identifier">set_due_date_for_task</span>(<span class="ruby-identifier">task</span>, <span class="ruby-constant">Date</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">task_info</span>.<span class="ruby-identifier">due_date</span>.<span class="ruby-identifier">to_s</span>)) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">task_info</span>.<span class="ruby-identifier">due_date</span> <span class="ruby-comment cmt"># When Date is</span>
+          <span class="ruby-comment cmt"># parsing like this, only the date (without time or time zone) will be left.</span>
+  <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="id-for-task-method" class="method-detail ">
+				<a name="M000013"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">id_for_task</span><span
+						class="method-args">(task)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p class="missing-docs">(Not documented)</p>
+					
+
+					
+					<div class="method-source-code"
+						id="id-for-task-source">
+<pre>
+<span class="ruby-comment cmt"># File mail_to_gtd.rb, line 196</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">id_for_task</span>(<span class="ruby-identifier">task</span>)
+     <span class="ruby-comment cmt"># Workaround to get id in the right form (not the numbers only form that task.id sometimes gives)</span>
+    <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">task</span>.<span class="ruby-identifier">url</span>.<span class="ruby-identifier">split</span>(<span class="ruby-value str">'thehitlist://'</span>).<span class="ruby-identifier">last</span>
+  <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="set-due-date-for-task-method" class="method-detail ">
+				<a name="M000012"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">set_due_date_for_task</span><span
+						class="method-args">(task, date)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p class="missing-docs">(Not documented)</p>
+					
+
+					
+					<div class="method-source-code"
+						id="set-due-date-for-task-source">
+<pre>
+<span class="ruby-comment cmt"># File mail_to_gtd.rb, line 178</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">set_due_date_for_task</span>(<span class="ruby-identifier">task</span>, <span class="ruby-identifier">date</span>)
+    <span class="ruby-identifier">id</span> = <span class="ruby-identifier">id_for_task</span>(<span class="ruby-identifier">task</span>)
+
+    <span class="ruby-comment cmt"># Workaround since I don't manage to get task.setDueDate to work correctly (it just sets the date to 1/1-1904)</span>
+    <span class="ruby-comment cmt"># Using applescript to set the date.</span>
+    <span class="ruby-identifier">sh</span> = <span class="ruby-node">&quot;osascript &lt;&lt;EOF
+      tell application \&quot;The Hit List\&quot;
+            set due date of task id \&quot;#{id}\&quot; in inbox to date \&quot;#{date}\&quot;
+      end tell
+EOF
+      &quot;</span>
+    <span class="ruby-identifier">stdin</span>, <span class="ruby-identifier">stdout</span>, <span class="ruby-identifier">stderr</span> = <span class="ruby-constant">Open3</span>.<span class="ruby-identifier">popen3</span>(<span class="ruby-identifier">sh</span>) <span class="ruby-comment cmt"># (Note: This can be picky about filenames, spaces etc.)</span>
+    <span class="ruby-identifier">stderr_txt</span> = <span class="ruby-identifier">stderr</span>.<span class="ruby-identifier">read</span>.<span class="ruby-identifier">strip</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;Error from shell when creating task: #{stderr_txt}&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">stderr_txt</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value str">''</span>
+
+    <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">stdout</span>.<span class="ruby-identifier">read</span>.<span class="ruby-identifier">strip</span>  <span class="ruby-comment cmt"># Returns the id of the new task.</span>
+  <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="private-instance-method-details" class="method-section section">
+			<h3 class="section-header">Private Instance Methods</h3>
+
+		
+			<div id="container-from-path-method" class="method-detail ">
+				<a name="M000014"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">container_from_path</span><span
+						class="method-args">(container_path)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p class="missing-docs">(Not documented)</p>
+					
+
+					
+					<div class="method-source-code"
+						id="container-from-path-source">
+<pre>
+<span class="ruby-comment cmt"># File mail_to_gtd.rb, line 255</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">container_from_path</span>(<span class="ruby-identifier">container_path</span>)
+    <span class="ruby-comment cmt"># Note: There is a mix of containers - folders, lists and super-tasks</span>
+    
+    <span class="ruby-identifier">container_path</span> = <span class="ruby-identifier">container_path</span>.<span class="ruby-identifier">split</span>(<span class="ruby-value str">'::'</span>)
+
+    <span class="ruby-identifier">parent_container</span> = <span class="ruby-ivar">@app</span>.<span class="ruby-identifier">foldersGroup</span>    <span class="ruby-comment cmt"># foldersGroup is the root for the folders etc.</span>
+    <span class="ruby-keyword kw">while</span> <span class="ruby-identifier">container_path</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> <span class="ruby-keyword kw">do</span>
+      <span class="ruby-comment cmt"># parent_container = parent_container.get   # TEST</span>
+      <span class="ruby-identifier">searching_for</span> = <span class="ruby-identifier">container_path</span>.<span class="ruby-identifier">shift</span>.<span class="ruby-identifier">strip</span>
+
+      <span class="ruby-identifier">parent_container_class</span> = <span class="ruby-identifier">parent_container</span>.<span class="ruby-identifier">class</span>   <span class="ruby-comment cmt"># TODO I'm not sure the get is needed. Check what is known without it.</span>
+      <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">parent_container_class</span>.<span class="ruby-identifier">to_s</span>
+
+        <span class="ruby-keyword kw">when</span> <span class="ruby-ivar">@app</span>.<span class="ruby-identifier">classesForScriptingNames</span>[<span class="ruby-value str">'folder'</span>].<span class="ruby-identifier">class</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-comment cmt"># Since the smart folders are sorted out, this is a folder (I think)</span>
+          <span class="ruby-identifier">matching_child_groups</span> = <span class="ruby-identifier">parent_container</span>.<span class="ruby-identifier">groups</span>.<span class="ruby-identifier">select</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">group</span><span class="ruby-operator">|</span>
+            <span class="ruby-identifier">group</span>.<span class="ruby-identifier">name</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">searching_for</span>  <span class="ruby-comment cmt"># Note: This will</span>
+            <span class="ruby-comment cmt"># also match smart folders, so we need to filter those out. We do this in a separate pass</span>
+            <span class="ruby-comment cmt"># to avoid &quot;get&quot; to many times.</span>
+          <span class="ruby-keyword kw">end</span>          
+          <span class="ruby-identifier">matching_child_groups</span> = <span class="ruby-identifier">matching_child_groups</span>.<span class="ruby-identifier">reject</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">group</span><span class="ruby-operator">|</span> 
+            <span class="ruby-identifier">group</span>.<span class="ruby-identifier">get</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">==</span> <span class="ruby-ivar">@app</span>.<span class="ruby-identifier">classesForScriptingNames</span>[<span class="ruby-value str">'smart folder'</span>].<span class="ruby-identifier">class</span>.<span class="ruby-identifier">to_s</span>
+          <span class="ruby-keyword kw">end</span>
+
+        <span class="ruby-keyword kw">when</span> <span class="ruby-ivar">@app</span>.<span class="ruby-identifier">classesForScriptingNames</span>[<span class="ruby-value str">'list'</span>].<span class="ruby-identifier">class</span>.<span class="ruby-identifier">to_s</span>, <span class="ruby-ivar">@app</span>.<span class="ruby-identifier">classesForScriptingNames</span>[<span class="ruby-value str">'task'</span>].<span class="ruby-identifier">class</span>.<span class="ruby-identifier">to_s</span>
+          <span class="ruby-identifier">matching_child_groups</span> = <span class="ruby-identifier">parent_container</span>.<span class="ruby-identifier">tasks</span>.<span class="ruby-identifier">select</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">task</span><span class="ruby-operator">|</span> <span class="ruby-identifier">searching_for</span> = <span class="ruby-identifier">strip_tags_and_contexts</span>(<span class="ruby-identifier">task</span>.<span class="ruby-identifier">title</span>) }
+
+        <span class="ruby-keyword kw">else</span> <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;Unknow class of parent container: '#{parent_container_class.to_s}&quot;</span>
+      <span class="ruby-keyword kw">end</span>
+      <span class="ruby-comment cmt"># Check the result</span>
+      <span class="ruby-constant">NSLog</span>(<span class="ruby-node">&quot;WARNING. More than one group with name '#{searching_for}' in '#{parent_container.name}'. Using the first.&quot;</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">matching_child_groups</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span> 
+            <span class="ruby-comment cmt"># TODO In lists, there can be several task with the same name. How handle that?</span>
+      <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;Can't find group '#{searching_for}' in '#{parent_container.name}'. &quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">matching_child_groups</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+      <span class="ruby-identifier">parent_container</span> = <span class="ruby-identifier">matching_child_groups</span>.<span class="ruby-identifier">first</span>  <span class="ruby-comment cmt"># (Should be only one). Used during the next loop or as result.</span>
+    <span class="ruby-keyword kw">end</span>
+
+    <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@app</span>.<span class="ruby-identifier">inbox</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">parent_container</span> <span class="ruby-operator">==</span> <span class="ruby-ivar">@app</span>.<span class="ruby-identifier">foldersGroup</span>
+    <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">parent_container</span>
+  <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="method-missing-method" class="method-detail ">
+				<a name="M000016"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">method_missing</span><span
+						class="method-args">(method_name, *args)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p class="missing-docs">(Not documented)</p>
+					
+
+					
+					<div class="method-source-code"
+						id="method-missing-source">
+<pre>
+<span class="ruby-comment cmt"># File mail_to_gtd.rb, line 299</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">method_missing</span>(<span class="ruby-identifier">method_name</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+    <span class="ruby-ivar">@app</span>.<span class="ruby-identifier">send</span>(<span class="ruby-identifier">method_name</span>,<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+  <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="strip-tags-and-contexts-method" class="method-detail ">
+				<a name="M000015"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">strip_tags_and_contexts</span><span
+						class="method-args">(title)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p class="missing-docs">(Not documented)</p>
+					
+
+					
+					<div class="method-source-code"
+						id="strip-tags-and-contexts-source">
+<pre>
+<span class="ruby-comment cmt"># File mail_to_gtd.rb, line 294</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">strip_tags_and_contexts</span>(<span class="ruby-identifier">title</span>)
+    <span class="ruby-comment cmt"># Returns all text before first /tag or @context</span>
+    <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">title</span>.<span class="ruby-identifier">split</span>(<span class="ruby-regexp re">/ \//</span>).<span class="ruby-identifier">first</span>.<span class="ruby-identifier">split</span>(<span class="ruby-regexp re">/ @/</span>).<span class="ruby-identifier">first</span>.<span class="ruby-identifier">strip</span>
+  <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+
