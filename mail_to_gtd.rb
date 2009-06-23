@@ -1,3 +1,6 @@
+# Branch A - fixa vettigare upplagg av foldrar, klasser, etc.
+#
+#
 # Command line app, primarily used by Mail.app rules to send actions to OmniFocus
 #
 # To call from a rule, make an applescript like this:
