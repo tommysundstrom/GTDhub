@@ -1,0 +1,465 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 44;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		65BEA05D0F69527E00AB06F9 /* Test */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 65BEA0610F6952A400AB06F9 /* Build configuration list for PBXAggregateTarget "Test" */;
+			buildPhases = (
+				65BEA05C0F69527E00AB06F9 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = Test;
+			productName = Test;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		4DDCA7070ACC9A6100E082CE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		4DDCA7080ACC9A6100E082CE /* rb_main.rb in Resources */ = {isa = PBXBuildFile; fileRef = E8F5E25803AEB7C803A81C6F /* rb_main.rb */; };
+		4DDCA70A0ACC9A6100E082CE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		4DDCA70C0ACC9A6100E082CE /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		4DDCA70D0ACC9A6100E082CE /* RubyCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8F5E24E03AEB6EC03A81C6F /* RubyCocoa.framework */; };
+		65882DA40F70F0410087BE46 /* tommys_utilities.rb in Resources */ = {isa = PBXBuildFile; fileRef = 65882DA30F70F0410087BE46 /* tommys_utilities.rb */; };
+		65882E050F7134F10087BE46 /* English.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 65882E010F7134F10087BE46 /* English.lproj */; };
+		65B2EA5F0F69A75400DD3055 /* log.rb in Resources */ = {isa = PBXBuildFile; fileRef = 65B2EA5E0F69A75400DD3055 /* log.rb */; };
+		65B2EA610F69B0AF00DD3055 /* log-test.rb in Resources */ = {isa = PBXBuildFile; fileRef = 65B2EA600F69B0AF00DD3055 /* log-test.rb */; };
+		65B2EB660F6A5F1D00DD3055 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65B2EB640F6A5F1D00DD3055 /* MainMenu.xib */; };
+		65B2EB970F6A63AF00DD3055 /* debug_tools.rb in Resources */ = {isa = PBXBuildFile; fileRef = 65B2EB960F6A63AF00DD3055 /* debug_tools.rb */; };
+		65B2EE690F6D451300DD3055 /* design_by_contract.rb in Resources */ = {isa = PBXBuildFile; fileRef = 65BED7750F69600900AB06F9 /* design_by_contract.rb */; };
+		65BEA0730F6953BC00AB06F9 /* Rakefile in Resources */ = {isa = PBXBuildFile; fileRef = 65BEA0720F6953BC00AB06F9 /* Rakefile */; };
+		65BEBDF70F695C3500AB06F9 /* test_setup.rb in Resources */ = {isa = PBXBuildFile; fileRef = 65BEBDF60F695C3500AB06F9 /* test_setup.rb */; };
+		65FE032E0F68174500FDC1B9 /* hello_world.rb in Resources */ = {isa = PBXBuildFile; fileRef = 65FE032D0F68174500FDC1B9 /* hello_world.rb */; };
+		65FE036D0F681F7500FDC1B9 /* logging.rb in Resources */ = {isa = PBXBuildFile; fileRef = 65FE036C0F681F7500FDC1B9 /* logging.rb */; };
+		65FE03980F68384900FDC1B9 /* pathstring.rb in Resources */ = {isa = PBXBuildFile; fileRef = 65FE03970F68384900FDC1B9 /* pathstring.rb */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		4DDCA7110ACC9A6100E082CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DDCA7120ACC9A6100E082CE /* FlatTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlatTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		65882DA30F70F0410087BE46 /* tommys_utilities.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = tommys_utilities.rb; sourceTree = "<group>"; };
+		65882E010F7134F10087BE46 /* English.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = English.lproj; sourceTree = "<group>"; };
+		65B2EA5E0F69A75400DD3055 /* log.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = log.rb; sourceTree = "<group>"; };
+		65B2EA600F69B0AF00DD3055 /* log-test.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = "log-test.rb"; sourceTree = "<group>"; };
+		65B2EB650F6A5F1D00DD3055 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		65B2EB960F6A63AF00DD3055 /* debug_tools.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = debug_tools.rb; sourceTree = "<group>"; };
+		65BEA0180F6871A300AB06F9 /* hello_world-test.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = "hello_world-test.rb"; sourceTree = "<group>"; };
+		65BEA0720F6953BC00AB06F9 /* Rakefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Rakefile; sourceTree = "<group>"; };
+		65BEBDF60F695C3500AB06F9 /* test_setup.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = test_setup.rb; sourceTree = "<group>"; };
+		65BED7740F69600900AB06F9 /* debug.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = debug.rb; sourceTree = "<group>"; };
+		65BED7750F69600900AB06F9 /* design_by_contract.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = design_by_contract.rb; sourceTree = "<group>"; };
+		65BED7760F69600900AB06F9 /* pathstring-test.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = "pathstring-test.rb"; sourceTree = "<group>"; };
+		65FE032D0F68174500FDC1B9 /* hello_world.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = hello_world.rb; sourceTree = "<group>"; };
+		65FE036C0F681F7500FDC1B9 /* logging.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = logging.rb; sourceTree = "<group>"; };
+		65FE03970F68384900FDC1B9 /* pathstring.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = pathstring.rb; sourceTree = "<group>"; };
+		E8F5E24E03AEB6EC03A81C6F /* RubyCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RubyCocoa.framework; path = /System/Library/Frameworks/RubyCocoa.framework; sourceTree = "<absolute>"; };
+		E8F5E25803AEB7C803A81C6F /* rb_main.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = rb_main.rb; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4DDCA70B0ACC9A6100E082CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DDCA70C0ACC9A6100E082CE /* Cocoa.framework in Frameworks */,
+				4DDCA70D0ACC9A6100E082CE /* RubyCocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				65FE03280F68169500FDC1B9 /* Controllers */,
+				65FE03270F68168B00FDC1B9 /* Views */,
+				65FE03260F68167D00FDC1B9 /* Models */,
+				65FE03240F68166000FDC1B9 /* Utilities */,
+				65FE03230F68165300FDC1B9 /* Externals */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+				E8F5E24E03AEB6EC03A81C6F /* RubyCocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4DDCA7120ACC9A6100E082CE /* FlatTemplate.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* FlatTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				65882E010F7134F10087BE46 /* English.lproj */,
+				080E96DDFE201D6D7F000001 /* Classes */,
+				65FE03250F68166800FDC1B9 /* Third Party */,
+				65FE032A0F6816D000FDC1B9 /* Tests */,
+				65BEBDF50F695C1100AB06F9 /* Testutilities */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+				4DDCA7110ACC9A6100E082CE /* Info.plist */,
+				65B2EB640F6A5F1D00DD3055 /* MainMenu.xib */,
+			);
+			name = FlatTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				65BEA0720F6953BC00AB06F9 /* Rakefile */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+				E8F5E25803AEB7C803A81C6F /* rb_main.rb */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		65BEBDF50F695C1100AB06F9 /* Testutilities */ = {
+			isa = PBXGroup;
+			children = (
+				65BEBDF60F695C3500AB06F9 /* test_setup.rb */,
+			);
+			name = Testutilities;
+			sourceTree = "<group>";
+		};
+		65FE03230F68165300FDC1B9 /* Externals */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Externals;
+			sourceTree = "<group>";
+		};
+		65FE03240F68166000FDC1B9 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				65882DA30F70F0410087BE46 /* tommys_utilities.rb */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		65FE03250F68166800FDC1B9 /* Third Party */ = {
+			isa = PBXGroup;
+			children = (
+				65BED7740F69600900AB06F9 /* debug.rb */,
+				65BED7750F69600900AB06F9 /* design_by_contract.rb */,
+				65BED7760F69600900AB06F9 /* pathstring-test.rb */,
+				65FE03970F68384900FDC1B9 /* pathstring.rb */,
+				65FE036C0F681F7500FDC1B9 /* logging.rb */,
+				65B2EA5E0F69A75400DD3055 /* log.rb */,
+				65B2EA600F69B0AF00DD3055 /* log-test.rb */,
+				65B2EB960F6A63AF00DD3055 /* debug_tools.rb */,
+			);
+			name = "Third Party";
+			sourceTree = "<group>";
+		};
+		65FE03260F68167D00FDC1B9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		65FE03270F68168B00FDC1B9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		65FE03280F68169500FDC1B9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				65BEA0180F6871A300AB06F9 /* hello_world-test.rb */,
+				65FE032D0F68174500FDC1B9 /* hello_world.rb */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		65FE032A0F6816D000FDC1B9 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Tests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		4DDCA7040ACC9A6100E082CE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		4DDCA7030ACC9A6100E082CE /* FlatTemplate */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4DDCA70E0ACC9A6100E082CE /* Build configuration list for PBXNativeTarget "FlatTemplate" */;
+			buildPhases = (
+				4DDCA7040ACC9A6100E082CE /* Headers */,
+				4DDCA7050ACC9A6100E082CE /* Resources */,
+				4DDCA7090ACC9A6100E082CE /* Sources */,
+				4DDCA70B0ACC9A6100E082CE /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FlatTemplate;
+			productInstallPath = "$(HOME)/Applications";
+			productName = FlatTemplate;
+			productReference = 4DDCA7120ACC9A6100E082CE /* FlatTemplate.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 4D7A7B570ABF745500C2D4C0 /* Build configuration list for PBXProject "GTDhub" */;
+			compatibilityVersion = "Xcode 3.0";
+			hasScannedForEncodings = 0;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* FlatTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4DDCA7030ACC9A6100E082CE /* FlatTemplate */,
+				65BEA05D0F69527E00AB06F9 /* Test */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4DDCA7050ACC9A6100E082CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DDCA7070ACC9A6100E082CE /* InfoPlist.strings in Resources */,
+				4DDCA7080ACC9A6100E082CE /* rb_main.rb in Resources */,
+				65FE032E0F68174500FDC1B9 /* hello_world.rb in Resources */,
+				65FE036D0F681F7500FDC1B9 /* logging.rb in Resources */,
+				65FE03980F68384900FDC1B9 /* pathstring.rb in Resources */,
+				65BEA0730F6953BC00AB06F9 /* Rakefile in Resources */,
+				65BEBDF70F695C3500AB06F9 /* test_setup.rb in Resources */,
+				65B2EA5F0F69A75400DD3055 /* log.rb in Resources */,
+				65B2EA610F69B0AF00DD3055 /* log-test.rb in Resources */,
+				65B2EB660F6A5F1D00DD3055 /* MainMenu.xib in Resources */,
+				65B2EB970F6A63AF00DD3055 /* debug_tools.rb in Resources */,
+				65B2EE690F6D451300DD3055 /* design_by_contract.rb in Resources */,
+				65882DA40F70F0410087BE46 /* tommys_utilities.rb in Resources */,
+				65882E050F7134F10087BE46 /* English.lproj in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		65BEA05C0F69527E00AB06F9 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = "/usr/bin/env ruby";
+			shellScript = "require 'test_setup'\nrequire 'log'\n\n#Log.setup(:target_test)\t  # This makes a version of the Log class that does not log to stdout\n#Log.debug '*************************** Target: Test *********************************'\n\nrequire 'rb_main'\nrb_main_init\n\nDir.glob('*-test.rb').each {|t| require(t)}";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4DDCA7090ACC9A6100E082CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DDCA70A0ACC9A6100E082CE /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C165DFE840E0CC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		65B2EB640F6A5F1D00DD3055 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				65B2EB650F6A5F1D00DD3055 /* English */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4D7A7B580ABF745500C2D4C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
+			};
+			name = Debug;
+		};
+		4D7A7B590ABF745500C2D4C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
+			};
+			name = Release;
+		};
+		4DDCA70F0ACC9A6100E082CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = FlatTemplate;
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		4DDCA7100ACC9A6100E082CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_MODEL_TUNING = G5;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = FlatTemplate;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		65BEA05E0F69527F00AB06F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = Test;
+			};
+			name = Debug;
+		};
+		65BEA05F0F69527F00AB06F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				PRODUCT_NAME = Test;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4D7A7B570ABF745500C2D4C0 /* Build configuration list for PBXProject "GTDhub" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D7A7B580ABF745500C2D4C0 /* Debug */,
+				4D7A7B590ABF745500C2D4C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4DDCA70E0ACC9A6100E082CE /* Build configuration list for PBXNativeTarget "FlatTemplate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4DDCA70F0ACC9A6100E082CE /* Debug */,
+				4DDCA7100ACC9A6100E082CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		65BEA0610F6952A400AB06F9 /* Build configuration list for PBXAggregateTarget "Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65BEA05E0F69527F00AB06F9 /* Debug */,
+				65BEA05F0F69527F00AB06F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
