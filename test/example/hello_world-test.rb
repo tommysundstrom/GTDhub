@@ -6,11 +6,11 @@
 #  Copyright (c) 2009 Helt Enkelt ab. All rights reserved.
 #
 
-require 'test_setup'
-#require 'test/unit'
-#require 'rubygems'
-#require 'shoulda'
-#require 'assert2'
+require 'test/unit'
+require 'rubygems'
+require 'shoulda'
+require 'assert2'
+
 
 
 class TC_HelloWorld_test < Test::Unit::TestCase

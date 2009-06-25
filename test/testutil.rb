@@ -6,13 +6,8 @@
 # We make no guarantees that this code is fit for any purpose. 
 # Visit http://www.pragmaticprogrammer.com/titles/bmrc for more book information.
 #---
-require 'osx/cocoa'
-require 'path-setting'
+require 'assert2'
 
-if $0 == __FILE__ then
-  OSX::NSLog "RubyCocoa version is #{OSX::RUBYCOCOA_VERSION}."
-  OSX::NSLog "Using Ruby files in #{RubyCocoaLocations::app_root}."
-  RubyCocoaLocations.set_hierarchical_app_load_paths
-  RubyCocoaLocations.load_ruby_files
-  OSX.NSApplicationMain(0, nil)
+Dir[File.join(File.dirname(__FILE__), 'testutil/**/*.rb')].each do | f |
+  require f
 end

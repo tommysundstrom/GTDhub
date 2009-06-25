@@ -6,13 +6,25 @@
 # We make no guarantees that this code is fit for any purpose. 
 # Visit http://www.pragmaticprogrammer.com/titles/bmrc for more book information.
 #---
-require 'osx/cocoa'
-require 'path-setting'
+class Class
+  alias_method :testable, :protected
+end
 
-if $0 == __FILE__ then
-  OSX::NSLog "RubyCocoa version is #{OSX::RUBYCOCOA_VERSION}."
-  OSX::NSLog "Using Ruby files in #{RubyCocoaLocations::app_root}."
-  RubyCocoaLocations.set_hierarchical_app_load_paths
-  RubyCocoaLocations.load_ruby_files
-  OSX.NSApplicationMain(0, nil)
+module Fenestrable
+  class Fenestra
+    def initialize(owner)
+      @owner = owner
+    end
+
+    def method_missing(message, *args)
+      @owner.send(message, *args)
+    end
+  end
+
+  attr_accessor :fenestra
+
+  def self.extended(object)
+    object.fenestra = Fenestra.new(object)
+  end
+
 end

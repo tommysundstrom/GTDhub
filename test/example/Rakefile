@@ -16,9 +16,9 @@ end
 
 require File.expand_path("#{dir_containing('path-setting.rb')}/path-setting")
 
-
-task :default => :test
+task :default => [:test]
 desc "Run tests."
 Rake::TestTask.new do | t |
   t.test_files = FileList['**/*tests.rb'] + FileList['**/*test.rb']
 end
+

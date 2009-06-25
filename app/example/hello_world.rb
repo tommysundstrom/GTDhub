@@ -7,7 +7,7 @@
 #
 
 require 'osx/cocoa'
-require 'log'
+#require '../standardutilities/log'
 
 class HelloWorld
   def initialize

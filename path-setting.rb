@@ -81,6 +81,7 @@ module RubyCocoaLocations
   end
 
   def self.load_ruby_files
+    require 'load-subdirs.rb'   # Order is important.
     rbfiles = Dir.chdir(app_root) { Dir["*.rb"] }
     rbfiles.each { |file| require(file) }
   end
@@ -105,4 +106,14 @@ module RubyCocoaLocations
     OSX::NSBundle.mainBundle.resourcePath.fileSystemRepresentation
   end
 
+  def self.dir_in_which(start=Dir.getwd, &block)
+    return File.expand_path(start) if block.call(start)
+    dir_in_which(File.join(start, '..'), &block)
+  end
+
+  def self.dir_containing(file_basename)
+    dir_in_which { | dirname | 
+      File.exist?(File.join(dirname, file_basename)) 
+    }
+  end
 end
